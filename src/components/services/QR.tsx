@@ -1,7 +1,11 @@
 import { corners } from "@/data/corners"
 import { ArrowDown, X, Zap } from "lucide-react"
 
-export const QR = ({ closeModal }:any) => {
+interface QRProps{
+  closeModal: () => void
+}
+
+export const QR:React.FC<QRProps> = ({ closeModal }) => {
     return(
         <div className="bg-gray-500/50 fixed inset-0">
             <X onClick={closeModal} className="bg-white text-black rounded-full size-8 p-1 absolute right-8 top-10 cursor-pointer" />
